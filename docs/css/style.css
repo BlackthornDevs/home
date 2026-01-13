@@ -6,20 +6,24 @@
 }
 
 :root {
-    --color-primary: #1a1a2e;
-    --color-secondary: #16213e;
-    --color-accent: #e94560;
-    --color-accent-light: #ff6b6b;
+    --color-primary: #0a1628;
+    --color-secondary: #0d2137;
+    --color-accent: #00b4d8;
+    --color-accent-light: #48cae4;
+    --color-accent-glow: #00d4ff;
+    --color-node: #00ff88;
+    --color-node-glow: #22ffaa;
     --color-text: #edf2f4;
     --color-text-muted: #8d99ae;
-    --color-bg: #0f0f1a;
-    --color-card: #1a1a2e;
-    --color-border: #2d2d44;
+    --color-bg: #050d18;
+    --color-card: #0a1628;
+    --color-border: #1a3a5c;
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-display: 'Playfair Display', Georgia, serif;
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px rgba(0, 180, 216, 0.3);
     --transition: all 0.3s ease;
 }
 
@@ -73,9 +77,14 @@ body {
     font-size: 1.25rem;
 }
 
-.logo-icon {
-    color: var(--color-accent);
-    font-size: 1.5rem;
+.logo-img {
+    height: 32px;
+    width: auto;
+}
+
+.footer-logo-img {
+    height: 40px;
+    width: auto;
 }
 
 .nav-links {
@@ -117,8 +126,8 @@ body {
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 20% 80%, rgba(233, 69, 96, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(233, 69, 96, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(0, 180, 216, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -159,19 +168,19 @@ body {
 .cta-button {
     display: inline-block;
     padding: 16px 40px;
-    background: var(--color-accent);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
     color: white;
     text-decoration: none;
     font-weight: 600;
     border-radius: 50px;
     transition: var(--transition);
-    box-shadow: 0 4px 20px rgba(233, 69, 96, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 180, 216, 0.4);
 }
 
 .cta-button:hover {
-    background: var(--color-accent-light);
+    background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent-glow) 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 30px rgba(233, 69, 96, 0.5);
+    box-shadow: 0 6px 30px rgba(0, 212, 255, 0.5);
 }
 
 /* Section Styles */
@@ -268,6 +277,7 @@ body {
     font-weight: 700;
     font-size: 1.25rem;
     color: white;
+    object-fit: cover;
 }
 
 .team-info h3 {
