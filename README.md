@@ -69,7 +69,7 @@ To complete the custom domain setup, configure your DNS with these records:
 
 **CNAME Record** (for www subdomain):
 ```
-www -> Blackthorn-Productions.github.io
+www -> BlackthornDevs.github.io
 ```
 
 ## License
