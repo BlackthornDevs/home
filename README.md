@@ -1,81 +1,69 @@
 # Blackthorn Productions
 
-**Creative Technology Solutions**
+Building digital experiences at the intersection of media, AI, and software.
 
-Welcome to the official repository for Blackthorn Productions, a creative technology venture founded by brothers Joe and Kevin Amditis.
+**[blackthorndevs.com](https://blackthorndevs.com)**
 
 ## About
 
-Blackthorn Productions builds innovative digital experiences at the intersection of media, AI, and software development. We combine deep expertise in journalism, AI applications, and software engineering to create solutions that matter.
+Blackthorn Productions is a creative technology venture founded by brothers Joe and Kevin Amditis. We combine expertise in journalism, AI applications, BIM, and software engineering.
 
-## Website
+## Focus areas
 
-Visit us at **[blackthorndevs.com](https://blackthorndevs.com)**
+- **ai/** — Large language models, generative AI, workflow automation
+- **software/** — Full-stack development, API design, enterprise solutions
+- **media/** — Digital media systems, CMS development, journalism tools
+- **strategy/** — Technology consulting, process design, digital transformation
 
-## The Team
+## Team
 
 ### Joe Amditis
-**Co-Founder | Media & AI**
+**Co-founder / Media & AI**
 
-- Associate Director of Operations at the Center for Cooperative Media
-- Adjunct Professor at Montclair State University
-- Expert in AI applications for journalism
+Associate Director of Operations at the Center for Cooperative Media at Montclair State University. Expert in AI applications for journalism and collaborative media initiatives.
+
 - Author of "Beginner's Prompt Handbook: ChatGPT for Local News Publishers"
-- Army National Guard veteran
+- Coordinator of U.S. Democracy Day (241+ news organizations)
+- Adjunct Professor, School of Communication and Media
+- Army National Guard veteran (7 years, deployed to Iraq)
 
-Connect: [Twitter](https://twitter.com/jsamditis) | [LinkedIn](https://linkedin.com/in/jamditis) | [Website](https://jamditis.com)
+[Twitter](https://twitter.com/jsamditis) · [LinkedIn](https://linkedin.com/in/jamditis) · [Website](https://jamditis.com)
 
 ### Kevin Amditis
-**Co-Founder | Engineering**
+**Co-founder / BIM & Design**
 
-- Lead MEP Designer and Software Developer at EliteCAD Designs
-- C# developer and software engineer
-- Expert in Autodesk Revit, AutoCAD, and BIM
+Lead MEP Designer at EliteCAD Designs. Expert in building information modeling, construction coordination, and Autodesk workflows.
+
+- Expert in Autodesk Revit, Navisworks, and AutoCAD
+- BIM coordination and clash detection specialist
+- IT department lead with team management experience
 - Army National Guard veteran
 
-Connect: [LinkedIn](https://linkedin.com/in/kevin-amditis-381b1bb6)
+[LinkedIn](https://linkedin.com/in/kevin-amditis-381b1bb6)
 
-## Repository Structure
+## Repository structure
 
 ```
-home/
-├── docs/           # GitHub Pages website files
-│   ├── index.html  # Main landing page
-│   ├── css/        # Stylesheets
-│   ├── CNAME       # Custom domain configuration
-│   └── _config.yml # Jekyll configuration
+blackthorn-home/
+├── docs/              # GitHub Pages website
+│   ├── index.html
+│   ├── images/
+│   ├── CNAME
+│   └── _config.yml
+├── ai/                # AI & automation projects
+├── software/          # Software development projects
+├── media/             # Media technology projects
+├── strategy/          # Digital strategy resources
 ├── LICENSE
 └── README.md
 ```
 
-## GitHub Pages Setup
+## Website
 
-This repository uses GitHub Pages to serve the landing page. The site is configured to:
+The site is hosted via GitHub Pages from the `/docs` folder.
 
-1. **Source**: Serve from the `/docs` folder on the main branch
-2. **Custom Domain**: [blackthorndevs.com](https://blackthorndevs.com)
-
-### DNS Configuration
-
-To complete the custom domain setup, configure your DNS with these records:
-
-**A Records** (point to GitHub Pages):
-```
-185.199.108.153
-185.199.109.153
-185.199.110.153
-185.199.111.153
-```
-
-**CNAME Record** (for www subdomain):
-```
-www -> BlackthornDevs.github.io
-```
+**Custom domain**: [blackthorndevs.com](https://blackthorndevs.com)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Built with purpose. Powered by innovation.
+MIT License — see [LICENSE](LICENSE) for details.
