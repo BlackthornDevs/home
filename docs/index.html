@@ -218,6 +218,47 @@
             writing-mode: vertical-rl;
             text-orientation: mixed;
         }
+
+        /* Game showcase */
+        .game-card {
+            border: 1px solid #222;
+            transition: all 0.4s var(--curve);
+            background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 100%);
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .game-card:hover {
+            border-color: #d97706;
+            transform: translateY(-3px);
+            background: linear-gradient(180deg, rgba(217, 119, 6, 0.05) 0%, rgba(255,255,255,0) 100%);
+        }
+
+        .game-card img {
+            transition: transform 0.6s var(--curve);
+        }
+
+        .game-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .game-card:hover .game-card-title {
+            color: #fbbf24;
+        }
+
+        .dev-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.7rem;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #fbbf24;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            padding: 0.25rem 0.75rem;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-purple-900 selection:text-white">
@@ -237,6 +278,7 @@
         </a>
         <div class="hidden md:flex gap-8 text-sm tracking-widest uppercase">
             <a href="#expertise" class="nav-link">Expertise</a>
+            <a href="#slopworks" class="nav-link">Projects</a>
             <a href="#studio" class="nav-link">Studio</a>
             <a href="#contact" class="nav-link">Contact</a>
         </div>
@@ -337,7 +379,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
                 <!-- Card 1: AI -->
                 <div class="service-card p-8 group">
                     <div class="icon-box mb-6 text-3xl text-neutral-500">
@@ -397,8 +439,128 @@
                         <li class="flex items-center gap-2"><div class="w-1 h-1 bg-purple-500"></div>Process design</li>
                     </ul>
                 </div>
+
+                <!-- Card 5: Game dev -->
+                <div class="service-card p-8 group">
+                    <div class="icon-box mb-6 text-3xl text-neutral-500">
+                        <i class="ph ph-game-controller"></i>
+                    </div>
+                    <h3 class="text-2xl text-white mb-3">Game dev</h3>
+                    <p class="text-neutral-500 text-sm leading-relaxed font-mono">
+                        Multiplayer game development with Unity, real building data from BIM, and networked co-op play.
+                    </p>
+                    <ul class="mt-6 text-xs text-neutral-600 font-mono space-y-2">
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-purple-500"></div>Unity + C#</li>
+                        <li class="flex items-center gap-2"><div class="w-1 h-1 bg-purple-500"></div>Multiplayer networking</li>
+                    </ul>
+                </div>
             </div>
         </section>
+
+        <!-- Slopworks Game Showcase -->
+        <section id="slopworks" class="relative overflow-hidden">
+            <!-- Background hero image -->
+            <div class="absolute inset-0">
+                <img src="/slopworks/assets/img/hero-factory-ruins.png"
+                     alt="The Slopworks Industrial complex in ruins at sunset"
+                     class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/85 to-[#050505]/40"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/60"></div>
+            </div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-32">
+                <div class="max-w-2xl">
+                    <!-- Badge -->
+                    <div class="dev-badge mb-8">
+                        <div class="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse"></div>
+                        Currently in development
+                    </div>
+
+                    <!-- Title -->
+                    <h2 class="text-6xl md:text-8xl text-white mb-3 tracking-tight" style="font-family: var(--font-display);">
+                        Slopworks
+                    </h2>
+                    <p class="text-xl md:text-2xl text-amber-200/70 mb-6" style="font-family: var(--font-display);">
+                        Post-apocalyptic co-op factory survival
+                    </p>
+
+                    <!-- Pitch -->
+                    <p class="text-neutral-300 font-mono text-sm leading-relaxed mb-4 max-w-lg">
+                        The AI that destroyed everything wants to help you rebuild.
+                        Reclaim ruined buildings. Build automation networks. Defend against mutated fauna.
+                    </p>
+                    <p class="text-neutral-500 font-mono text-sm mb-10">
+                        1&ndash;4 player co-op &middot; Unity + FishNet &middot; Real BIM building data
+                    </p>
+
+                    <!-- CTA -->
+                    <a href="/slopworks/" class="group inline-flex items-center gap-3 bg-amber-500 text-black px-6 py-3 hover:bg-amber-400 transition-colors duration-300">
+                        <span class="font-mono text-sm uppercase tracking-wider font-medium">Explore the project</span>
+                        <i class="ph ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game feature cards -->
+        <div class="bg-[#080808] border-y border-neutral-900">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 py-16">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <a href="/slopworks/build.html" class="game-card block">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="/slopworks/assets/img/home-base-factory.png"
+                                 alt="Player-built factory with conveyor belts"
+                                 class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <h4 class="game-card-title text-white text-lg mb-1 transition-colors" style="font-family: var(--font-display);">Build</h4>
+                            <p class="text-neutral-500 text-xs font-mono leading-relaxed">
+                                Conveyor networks, smelters, assemblers. Restore real mechanical systems inside reclaimed buildings.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="/slopworks/explore.html" class="game-card block">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="/slopworks/assets/img/building-breach.png"
+                                 alt="Entering a dark overgrown industrial corridor"
+                                 class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <h4 class="game-card-title text-white text-lg mb-1 transition-colors" style="font-family: var(--font-display);">Explore</h4>
+                            <p class="text-neutral-500 text-xs font-mono leading-relaxed">
+                                Each building is a self-contained dungeon. Enter, clear fauna, repair systems, restore production.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="/slopworks/explore.html#fauna" class="game-card block">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="/slopworks/assets/img/wave-defense.png"
+                                 alt="Night battle with turrets defending against creatures"
+                                 class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <h4 class="game-card-title text-white text-lg mb-1 transition-colors" style="font-family: var(--font-display);">Defend</h4>
+                            <p class="text-neutral-500 text-xs font-mono leading-relaxed">
+                                Mutated fauna have claimed the complex. Build turret networks and defend your base from nightly waves.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="/slopworks/slop.html" class="game-card block">
+                        <div class="aspect-video overflow-hidden">
+                            <img src="/slopworks/assets/img/slop-terminal-room.png"
+                                 alt="Glowing CRT terminal in a destroyed office"
+                                 class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <h4 class="game-card-title text-white text-lg mb-1 transition-colors" style="font-family: var(--font-display);">S.L.O.P.</h4>
+                            <p class="text-neutral-500 text-xs font-mono leading-relaxed">
+                                Your guide and logistics coordinator. Also the thing that probably caused all of this.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
 
         <!-- Studio / Team Section -->
         <section id="studio" class="py-24 bg-[#0a0a0a] border-y border-neutral-900">
@@ -560,7 +722,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('section h2, .service-card, .profile-card').forEach(el => {
+        document.querySelectorAll('section h2, .service-card, .profile-card, .game-card').forEach(el => {
             el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10', 'ease-out');
             observer.observe(el);
         });
